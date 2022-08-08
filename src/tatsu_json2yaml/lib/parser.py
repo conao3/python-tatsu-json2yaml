@@ -67,4 +67,12 @@ class Parser:
         self.model = tatsu.compile(self.grammar, semantics=JsonSemantics())
 
     def read(self, inpt: str) -> Optional[types.JsonValue]:
-        return self.model.parse(inpt)
+        res = self.model.parse(inpt)
+
+        if not res:
+            return
+
+        if not isinstance(res, types.JsonValue):
+            raise ValueError(f'Unexpected result: {type(res)}, {res}')
+
+        return res
