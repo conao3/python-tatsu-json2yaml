@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tatsu-json2yaml"
-description = "JSON2YAML converter powered by TatSu"
+description = "json2yaml converter powered by TatSu"
 readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = [
