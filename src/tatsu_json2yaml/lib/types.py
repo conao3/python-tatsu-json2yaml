@@ -2,7 +2,8 @@ import tatsu.objectmodel
 
 
 class JsonValue(tatsu.objectmodel.Node):
-    pass
+    def __init__(self, value):
+        self.value = value
 
 
 class JsonObject(JsonValue):
