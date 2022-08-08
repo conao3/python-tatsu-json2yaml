@@ -17,9 +17,7 @@ jsonarray =
 jsonvalue = ws jsonvalue_ ws;
 
 jsonvalue_ =
-    | jsonfalse
-    | jsontrue
-    | jsonnull
+    | jsonsymbol
     | jsonobject
     | jsonarray
     | jsonnumber
@@ -29,7 +27,7 @@ jsonvalue_ =
 jsonnumber = jsonfloat | jsonint;
 jsonint = /[0-9]+/ ;
 jsonfloat = /[0-9]+\.[0-9]+/ ;
-jsonstring = '"' /(\\.|[^"])*/ '"' ;
+jsonstring = '"' /(?:(?:\\.)|[^"])*/ '"' ;
 jsonsymbol = jsontrue | jsonfalse | jsonnull ;
 jsontrue = "true" ;
 jsonfalse = "false" ;
