@@ -16,7 +16,7 @@ classifiers = [
 ]
 requires-python = ">=3.11"
 dependencies = [
-    "TatSu~=5.17.1"
+    "TatSu>=5.17.1,<5.16.0"
 ]
 dynamic = ["version"]
 
