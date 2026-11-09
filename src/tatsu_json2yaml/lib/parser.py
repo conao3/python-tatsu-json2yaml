@@ -7,6 +7,8 @@ from . import types
 class JsonSemantics:
     def jsonvalue(self, ast):
         match ast:
+            case types.JsonValue():
+                return ast
             case (_, val, _):
                 return val
             case _:
